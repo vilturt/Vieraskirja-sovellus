@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<title>{% block title %}Vieraskirja-sovellus 1.0{% endblock %}</title>
+<meta name="description" content="">
+
+        
+        {% stylesheets 'css/style.css' filter='cssrewrite' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+<!-- IE6-8 support of HTML5 elements --> <!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+    <style>
+    
+        @font-face {
+      font-family: "Fontti";
+      src: url("font/pcsenior.ttf");
+    }
+        
+        @font-face {
+      font-family: "Valikko";
+      src: url("font/Courier Prime Code.ttf");
+    }
+    
+    h2 { font-family: "Fontti", serif }
+        
+        a, .footerteksti, p {
+            
+            font-family: "Valikko", serif 
+            
+        }
+    
+    </style>    
+    </head>
+    
+     {% image 'img/02.jpg' %}
+<body background="{{ asset_url }}">
+    {% endimage %}
+
+
+<header>
+    <center>
+<hgroup>
+    
+   
+    
+    {% image 'img/logo.png' %}
+    <img src="{{ asset_url }}" />
+{% endimage %}
+ 
+</hgroup>
+    
+    <br>
+    
+<nav>
+    
+    
+    <ul class="nav">
+  <li><a href="/">Etusivu</a></li>
+  <li><a href="/lue">Lue</a></li>
+  <li><a href="/kirjoita">Kirjoita</a></li>
+</ul>
+    
+</nav>
+    </center>
+    <br>
+</header>
+<section>
+    <center>
+    <article>
+    <h2>Kirjoita vieraskirjaan!</h2>
+        
+   
+        
+        
+
+<div class="cool">
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+</div>
+<br>
+    </article>
+    </center>
+</section>
+    
+   
+
+</body>
+</html>
+
+
+
